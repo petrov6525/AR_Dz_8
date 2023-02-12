@@ -1,0 +1,22 @@
+<div>
+    <div class="grid">
+        <img src={{selectedItem.path}} alt="">
+        <div class="info">
+            <div>Name : {{selectedItem.name}}</div>
+            <div>Author : {{selectedItem.author}}</div>
+            <div>Year : {{selectedItem.year}}</div>
+            <div>Size : {{selectedItem.size}}</div>
+            <div>PLace : {{selectedItem.place}}</div>
+        </div>
+    </div>
+    <div class="flex">
+        <div *ngFor="let item of pictures"
+             class="item" 
+             [class.active]="item===selectedItem"
+             (click)="ImgClick(item)">
+            <img src={{item.path}} alt="">
+        </div>
+    </div>
+    
+</div>
+
